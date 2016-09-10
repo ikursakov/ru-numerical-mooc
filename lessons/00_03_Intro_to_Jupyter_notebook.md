@@ -1,5 +1,5 @@
 # Введение в Jupyter notebooks 
-## Что такое Jupyter Notebook? ##
+## Что такое Jupyter Notebook?
 
 В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook. html) (ранее это всё называлось IPython Notebooks). Ноутбуки это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  MathJax, и исполняемый код Python.
 
@@ -14,17 +14,18 @@
 
 ``` http://localhost:8888/tree ```
 
-This will bring up a simple file-browser that will show the contents of the directory where you've launched the terminal from.  Click on the `New Notebook` button and then select **Python 3** at the bottom to create your first notebook.
+На заглавной странице отображается файловая структура директории, из которой был запущен сервер. Для того, чтобы создать свой первый ноутбук, кликните на кнопку `New Notebook`, а затем выберите пункт меню **Python 3** в самом низу списка.
 
 ![newnotebook](./images/newnotebook.gif)
 
-##Executing a code cell 
+##Выполнение ячейки кода
 
-Below the toolbars, you'll see a single code cell, prepended with `In [ ]:`.  This cell can contain an arbitrarily long code segment, but we'll start with a simple one liner.  In that lone code cell, type
+Под панелью инструментов расположена ячейка кода, начинающаяся с префикса `In [ ]:`. Такая ячейка может содержать произвольный кусок кода, но мы начнем с чего-нибудь простого. В единственной (пока) ячейке наберите
 
-```Python x = 5 ```
+```Python x = 5 ```,
 
-and then hit *Shift+Enter*.  If you just hit Enter you'll find that it will simply add another line to the current cell.  So remember, **to execute a cell**, it's **Shift+Enter**.
+а затем нажмите *Shift+Enter*. Если вы нажмете просто Enter, то обнаружите, что в ячейке просто появилась еще одна строка. Итак, запомните: для того, чтобы **выполнить** команды, содержащиеся в ячейке кода, необходимо нажать *Shift+Enter*.
+
 
 So what happened?  We've assigned the label x to the number 5.  And also you should see that the label of that cell will now read `In[1]:` because that's the first statement we've executed in this Python kernel. You'll also notice that the notebook has created a new cell, since we already used the only existing cell.
 
