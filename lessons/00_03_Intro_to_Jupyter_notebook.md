@@ -1,11 +1,11 @@
-# Введение в Jupyter notebooks # 
+# Введение в Jupyter notebooks 
 ## Что такое Jupyter Notebook? ##
 
 В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook. html) (ранее это всё называлось IPython Notebooks). Ноутбуки это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  MathJax, и исполняемый код Python.
 
-Лучший способ понять, что такое ноутбук Jupyter -- попроебовать, как это все работает, так что вперед! 
+Лучший способ понять, что такое ноутбук Jupyter -- попробовать, как это все работает, так что вперед! 
 
-## Запуск сервера нуотбуков ## 
+## Запуск сервера нуотбуков
 Для запуска сервера ноутбуков откройте терминал и введите
 
 ```Bash jupyter notebook ```
@@ -18,7 +18,7 @@ This will bring up a simple file-browser that will show the contents of the dire
 
 ![newnotebook](./images/newnotebook.gif)
 
-##Executing a code cell ## 
+##Executing a code cell 
 
 Below the toolbars, you'll see a single code cell, prepended with `In [ ]:`.  This cell can contain an arbitrarily long code segment, but we'll start with a simple one liner.  In that lone code cell, type
 
@@ -39,7 +39,8 @@ The whole procedure should look something like this:
 
 ![runandprint](./images/runandprint.gif)
 
-##The Kernel Don't worry too much about what the "kernel" is, but the main point to remember here is that we can assign a variable in one cell but still access it in a separate cell.  The cells are ways for *us* to divide up our thoughts and our code, but everything is connected underneath.
+##The Kernel
+Don't worry too much about what the "kernel" is, but the main point to remember here is that we can assign a variable in one cell but still access it in a separate cell.  The cells are ways for *us* to divide up our thoughts and our code, but everything is connected underneath.
 
 ##Overwriting variables ## Since each cell is interacting with the same Python instance, if we give `x` a new value and then enter `print(x)` we'll get that new value. That's pretty straight forward —but what if we then delete the cell where we gave `x` a new value?
 
