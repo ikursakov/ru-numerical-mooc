@@ -26,9 +26,9 @@
 
 а затем нажмите *Shift+Enter*. Если вы нажмете просто Enter, то обнаружите, что в ячейке просто появилась еще одна строка. Итак, запомните: для того, чтобы **выполнить** команды, содержащиеся в ячейке кода, необходимо нажать *Shift+Enter*.
 
+Что же произошло? Мы приписали ярлык 'x' числу 5. Кроме того, как можно увидеть, префикс самой ячейки изменился и теперь выглядит как `In[1]:`, так как это первое выражение, выполненное данным ядром Python. Также можно заметить, что в ноутбуке появилась новая ячейка, поскольку единственная сущестоввавшая до этого уже использована нами. 
 
-So what happened?  We've assigned the label x to the number 5.  And also you should see that the label of that cell will now read `In[1]:` because that's the first statement we've executed in this Python kernel. You'll also notice that the notebook has created a new cell, since we already used the only existing cell.
-
+В новой ячейке
 In this new cell, let's try to print out the value we assigned to x, so enter
 
 
@@ -43,7 +43,9 @@ The whole procedure should look something like this:
 ##The Kernel
 Don't worry too much about what the "kernel" is, but the main point to remember here is that we can assign a variable in one cell but still access it in a separate cell.  The cells are ways for *us* to divide up our thoughts and our code, but everything is connected underneath.
 
-##Overwriting variables ## Since each cell is interacting with the same Python instance, if we give `x` a new value and then enter `print(x)` we'll get that new value. That's pretty straight forward —but what if we then delete the cell where we gave `x` a new value?
+##Overwriting variables 
+
+Since each cell is interacting with the same Python instance, if we give `x` a new value and then enter `print(x)` we'll get that new value. That's pretty straight forward —but what if we then delete the cell where we gave `x` a new value?
 
 Let's take a look!
 
@@ -51,7 +53,8 @@ Let's take a look!
 
 Even though we deleted the cell where we assigned `x = 7`, the assignment is still valid.  In fact, the assignment will remain valid until we explicitly execute a cell that sets x equal to a new value, or until we completely restart this Jupyter Notebook instance.
 
-##Markdown Markdown is a *writing format* that makes it easy to type well-formatted text that is rendered into properly formatted XHTML.  It's seriously awesome.  Cells in Jupyter notebooks can be used for many things: to run Python, to embed media, or to write text in Markdown.  This allows us to write notes about what we're doing, what the code is doing, what we're *trying* to do, whatever we like! These notes can be for ourselves, to document our work, or to share with others.
+##Markdown 
+Markdown is a *writing format* that makes it easy to type well-formatted text that is rendered into properly formatted XHTML.  It's seriously awesome.  Cells in Jupyter notebooks can be used for many things: to run Python, to embed media, or to write text in Markdown.  This allows us to write notes about what we're doing, what the code is doing, what we're *trying* to do, whatever we like! These notes can be for ourselves, to document our work, or to share with others.
 
 To create a Markdown cell in a notebook, click on an empty cell, then click on the Dropdown list (by default, it will say "Code") and select "Markdown"—as shown below.
 
@@ -59,7 +62,8 @@ Markdown is also (sort of) code, so after you type some text, you will also hit 
 
 ![render](./images/rendermarkdown.gif)
 
-##Markdown Math ## Markdown can do more than just render simple text, it can also render LaTeX-style equations using **MathJax**!
+##Markdown Math ## 
+Markdown can do more than just render simple text, it can also render LaTeX-style equations using **MathJax**!
 
 * For inline math, wrap LaTeX inside single `$` signs `$...$` * For single-line rendering, wrap LaTeX inside double `$$` signs `$$...$$`
 
@@ -69,11 +73,13 @@ Markdown is also (sort of) code, so after you type some text, you will also hit 
 
 Be aware that math typesetting is handled by MathJax and not by LaTeX. While the vast majority of MathJax syntax is identical to LaTeX, there are a few small differences (especially when it comes to matrix commands).  So if you find something doesn't typeset the way you expect, Google around to make sure you're using the correct command.
 
-##More Markdown Syntax There are several references to learn Markdown tricks, but we especially like the summary by [John Gruber](http://daringfireball.net/projects/markdown/syntax).  A few features that we find particularly useful are listed below.
+##More Markdown Syntax 
+There are several references to learn Markdown tricks, but we especially like the summary by [John Gruber](http://daringfireball.net/projects/markdown/syntax).  A few features that we find particularly useful are listed below.
 
 For italics, wrap text in single `*`: `*this will be italic*` For bold, wrap text in double `**`: `**this will be bold**` For a bulleted list, start the line with an `*`, then type a space followed by the bullet item ``` * list item * another list item * and another ```
 
-##Moving Cells Around You'll often find that you want to add or delete cells, or just move them around.  To move a cell, just click on it to select it, then use the Up- and Down-arrows in the toolbar to change the position of the cell.
+##Moving Cells Around
+You'll often find that you want to add or delete cells, or just move them around.  To move a cell, just click on it to select it, then use the Up- and Down-arrows in the toolbar to change the position of the cell.
 
 ![movecells](./images/movingcells.gif)
 
