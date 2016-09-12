@@ -28,15 +28,13 @@
 
 Что же произошло? Мы приписали ярлык 'x' числу 5. Кроме того, как можно увидеть, префикс самой ячейки изменился и теперь выглядит как `In[1]:`, так как это первое выражение, выполненное данным ядром Python. Также можно заметить, что в ноутбуке появилась новая ячейка, поскольку единственная сущестоввавшая до этого уже использована нами. 
 
-В новой ячейке
-In this new cell, let's try to print out the value we assigned to x, so enter
-
+В новой ячейке попробуем вывести значение, присвоенное переменной x -- введем  
 
 ```Python print(x) ```
 
-and then hit **Shift+Enter**.  And there's the output we expect!  The cell gets labeled `In[2]:` and the output of that command is printed immediately below the cell.
+и нажмем **Shift+Enter**. Полуим ожидаемый результат. У новой ячейки появился префикс `In[2]:`, а результат выполнения команды выводится в ячейке, расположенной прямо под той, в которую мы вводили команду. 
 
-The whole procedure should look something like this:
+Весь процесс должен выглядеть примерно следующим образом:
 
 ![runandprint](./images/runandprint.gif)
 
