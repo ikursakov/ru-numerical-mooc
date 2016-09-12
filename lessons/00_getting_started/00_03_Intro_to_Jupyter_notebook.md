@@ -1,20 +1,20 @@
 # Введение в Jupyter notebooks 
 ## Что такое Jupyter Notebook?
 
-В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook. html) (ранее это всё называлось IPython Notebooks). Ноутбуки это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  MathJax, и исполняемый код Python.
+В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook. html) (ранее это всё называлось IPython Notebooks). Блокноты это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  $LaTeX$  и отрендеренные при помощи MathJax, и исполняемый код Python.
 
 Лучший способ понять, что такое ноутбук Jupyter -- попробовать, как это все работает, так что вперед! 
 
-## Запуск сервера нуотбуков
-Для запуска сервера ноутбуков откройте терминал и введите
+## Запуск сервера блокнотов
+Для запуска сервера блокнотов откройте терминал и введите
 
 ```Bash jupyter notebook ```
 
-Эта команда запустит сервер ноутбуков. После этого в браузере по умолчанию *должна* автоматически открыться заглавная страница сервера. Если этого не произошло, просто откройте браузер и введите в адресной строке 
+Эта команда запустит сервер блокнотов. После этого в браузере по умолчанию *должна* автоматически открыться заглавная страница сервера. Если этого не произошло, просто откройте браузер и введите в адресной строке 
 
 ``` http://localhost:8888/tree ```
 
-На заглавной странице отображается файловая структура директории, из которой был запущен сервер. Для того, чтобы создать свой первый ноутбук, кликните на кнопку `New Notebook`, а затем выберите пункт меню **Python 3** в самом низу списка.
+На заглавной странице отображается файловая структура директории, из которой был запущен сервер. Для того, чтобы создать свой первый блокнот, кликните на кнопку `New Notebook`, а затем выберите пункт меню **Python 3** в самом низу списка.
 
 ![newnotebook](./images/newnotebook.gif)
 
@@ -26,7 +26,7 @@
 
 а затем нажмите *Shift+Enter*. Если вы нажмете просто Enter, то обнаружите, что в ячейке просто появилась еще одна строка. Итак, запомните: для того, чтобы **выполнить** команды, содержащиеся в ячейке кода, необходимо нажать *Shift+Enter*.
 
-Что же произошло? Мы приписали ярлык 'x' числу 5. Кроме того, как можно увидеть, префикс самой ячейки изменился и теперь выглядит как `In[1]:`, так как это первое выражение, выполненное данным ядром Python. Также можно заметить, что в ноутбуке появилась новая ячейка, поскольку единственная сущестоввавшая до этого уже использована нами. 
+Что же произошло? Мы приписали ярлык 'x' числу 5. Кроме того, как можно увидеть, префикс самой ячейки изменился и теперь выглядит как `In[1]:`, так как это первое выражение, выполненное данным ядром Python. Также можно заметить, что в блокноте появилась новая ячейка, поскольку единственная сущестоввавшая до этого уже использована нами. 
 
 В новой ячейке попробуем вывести значение, присвоенное переменной x -- введем  
 
@@ -38,18 +38,19 @@
 
 ![runandprint](./images/runandprint.gif)
 
-##The Kernel
-Don't worry too much about what the "kernel" is, but the main point to remember here is that we can assign a variable in one cell but still access it in a separate cell.  The cells are ways for *us* to divide up our thoughts and our code, but everything is connected underneath.
+##Ядро
 
-##Overwriting variables 
+Нам сейчас не требуется детально разбираться, что такое "ядро" ("kernel"), главное отметить, что можно присвоить значение переменной в одной ячейке, а вызвать ее в другой, и это сработает. Ячейки позволяют *нам* разделить на логические блоки наши мысли и код, сохранив связи между блоками.
 
-Since each cell is interacting with the same Python instance, if we give `x` a new value and then enter `print(x)` we'll get that new value. That's pretty straight forward —but what if we then delete the cell where we gave `x` a new value?
+##Перезапись переменных 
 
-Let's take a look!
+Поскольку каждая ячейка может взаимодействовать с одним и тем же экземпляром интерпетатра Python, если присвоить переменной `x` новое значение, а затем ввести `print(x)`, то выведется это новое значение. Это довольно ожидаемый результат, но что если удалить ячейку, в которой происходило присваивание нового значения `x`?
+
+Сказано -- сделано!
 
 ![overwrite](./images/overwrite.gif)
 
-Even though we deleted the cell where we assigned `x = 7`, the assignment is still valid.  In fact, the assignment will remain valid until we explicitly execute a cell that sets x equal to a new value, or until we completely restart this Jupyter Notebook instance.
+Даже если удалить ячейку с кодом, в которой выполнялось присвоение `x = 7`, оно по-прежнему будет корректным, и при вызове `x`  будет выводиться `7`. Более того, ситуация не изменится до тех пор пока переменной `x` не будет присвоено новое значение, или пока не бдет перпзапущен весь блокнот целиком.
 
 ##Markdown 
 Markdown is a *writing format* that makes it easy to type well-formatted text that is rendered into properly formatted XHTML.  It's seriously awesome.  Cells in Jupyter notebooks can be used for many things: to run Python, to embed media, or to write text in Markdown.  This allows us to write notes about what we're doing, what the code is doing, what we're *trying* to do, whatever we like! These notes can be for ourselves, to document our work, or to share with others.
