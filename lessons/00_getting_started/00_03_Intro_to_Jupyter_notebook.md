@@ -1,7 +1,7 @@
 # Введение в Jupyter notebooks 
 ## Что такое Jupyter Notebook?
 
-В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook. html) (ранее это всё называлось IPython Notebooks). Блокноты это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  LaTeX  и отрендеренные при помощи MathJax, и исполняемый код Python.
+В этом курсе мы будем интенсивно использовать [Jupyter Notebooks](https://jupyter-notebook.readthedocs.org/en/latest/notebook.html) (ранее это всё называлось IPython Notebooks). Блокноты это мультимедийные документы, в которых можно использовать текст в формате Markdown, математические формулы, набранные в  LaTeX  и отрендеренные при помощи MathJax, и исполняемый код Python.
 
 Лучший способ понять, что такое ноутбук Jupyter -- попробовать, как это все работает, так что вперед! 
 
@@ -52,16 +52,20 @@
 
 Даже если удалить ячейку с кодом, в которой выполнялось присвоение `x = 7`, оно по-прежнему будет корректным, и при вызове `x`  будет выводиться `7`. Более того, ситуация не изменится до тех пор пока переменной `x` не будет присвоено новое значение, или пока не бдет перпзапущен весь блокнот целиком.
 
-##Markdown 
-Markdown is a *writing format* that makes it easy to type well-formatted text that is rendered into properly formatted XHTML.  It's seriously awesome.  Cells in Jupyter notebooks can be used for many things: to run Python, to embed media, or to write text in Markdown.  This allows us to write notes about what we're doing, what the code is doing, what we're *trying* to do, whatever we like! These notes can be for ourselves, to document our work, or to share with others.
+##Markdown
+ 
+Маркдаун ([Markdown](https://ru.wikipedia.org/wiki/Markdown)) это формат записи, 
+позволяеющий набирать форматированый текст, который может быть с легкостью преобразован в должным образом сформированный XHTML. Ячейки в блокноте Jupyter можно использовать для множества вещей: для запуска кода Python, встраивания графики/видео, или для написания текста в Markdown. Это позволяет делать заметки с пояснениями к тому, что мы делаем, что реализовано в коде, или с описанием того, что мы *только собираемся* сделать. Такие заметки оказываюся полезными как нам самим, так и тем, кто пишет код вместе с нами.
 
-To create a Markdown cell in a notebook, click on an empty cell, then click on the Dropdown list (by default, it will say "Code") and select "Markdown"—as shown below.
+Для того, чтобы создать в блокноте ячейку Markdown, кликните на пустую ячейку и в выпадающем списке выберите пункт "Markdown" вместо дефолтного "Code", как показано ниже.
 
-Markdown is also (sort of) code, so after you type some text, you will also hit *Shift+Enter* to execute the cell and render the Markdown text. Try it out!  Just type out a sentence or two in a markdown cell, then hit *Shift+Enter* to render the text.
+Markdown это язык разметки, поэтому текст на нем -- тоже что-то типа кода, и чтобы выполнить его и отобразить результат исполнения нужно нажать *Shift+Enter*.
+
 
 ![render](./images/rendermarkdown.gif)
 
-##Markdown Math ## 
+##Markdown Math
+
 Markdown can do more than just render simple text, it can also render LaTeX-style equations using **MathJax**!
 
 * For inline math, wrap LaTeX inside single `$` signs `$...$` * For single-line rendering, wrap LaTeX inside double `$$` signs `$$...$$`
@@ -73,11 +77,13 @@ Markdown can do more than just render simple text, it can also render LaTeX-styl
 Be aware that math typesetting is handled by MathJax and not by LaTeX. While the vast majority of MathJax syntax is identical to LaTeX, there are a few small differences (especially when it comes to matrix commands).  So if you find something doesn't typeset the way you expect, Google around to make sure you're using the correct command.
 
 ##More Markdown Syntax 
+
 There are several references to learn Markdown tricks, but we especially like the summary by [John Gruber](http://daringfireball.net/projects/markdown/syntax).  A few features that we find particularly useful are listed below.
 
 For italics, wrap text in single `*`: `*this will be italic*` For bold, wrap text in double `**`: `**this will be bold**` For a bulleted list, start the line with an `*`, then type a space followed by the bullet item ``` * list item * another list item * and another ```
 
 ##Moving Cells Around
+
 You'll often find that you want to add or delete cells, or just move them around.  To move a cell, just click on it to select it, then use the Up- and Down-arrows in the toolbar to change the position of the cell.
 
 ![movecells](./images/movingcells.gif)
