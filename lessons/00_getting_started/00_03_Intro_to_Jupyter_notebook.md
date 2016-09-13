@@ -55,7 +55,7 @@
 ##Markdown
  
 Маркдаун ([Markdown](https://ru.wikipedia.org/wiki/Markdown)) это формат записи, 
-позволяеющий набирать форматированый текст, который может быть с легкостью преобразован в должным образом сформированный XHTML. Ячейки в блокноте Jupyter можно использовать для множества вещей: для запуска кода Python, встраивания графики/видео, или для написания текста в Markdown. Это позволяет делать заметки с пояснениями к тому, что мы делаем, что реализовано в коде, или с описанием того, что мы *только собираемся* сделать. Такие заметки оказываюся полезными как нам самим, так и тем, кто пишет код вместе с нами.
+позволяеющий набирать форматированный текст, который может быть с легкостью преобразован в должным образом сформированный XHTML. Ячейки в блокноте Jupyter можно использовать для множества вещей: для запуска кода Python, встраивания графики/видео, или для написания текста в Markdown. Это позволяет делать заметки с пояснениями к тому, что мы делаем, что реализовано в коде, или с описанием того, что мы *только собираемся* сделать. Такие заметки оказываюся полезными как нам самим, так и тем, кто пишет код вместе с нами.
 
 Для того, чтобы создать в блокноте ячейку Markdown, кликните на пустую ячейку и в выпадающем списке выберите пункт "Markdown" вместо дефолтного "Code", как показано ниже.
 
@@ -64,28 +64,31 @@ Markdown это язык разметки, поэтому текст на нем
 
 ![render](./images/rendermarkdown.gif)
 
-##Markdown Math
+##Математика в Markdown
 
-Markdown can do more than just render simple text, it can also render LaTeX-style equations using **MathJax**!
+При помощи Маркдауна можно отображать не только простой форматированный текст, но и математические формулы, набранные в LaTeX. Для этого используется **MathJax**.
 
-* For inline math, wrap LaTeX inside single `$` signs `$...$` * For single-line rendering, wrap LaTeX inside double `$$` signs `$$...$$`
+* Для вставки внутритекстовой формулы нужно набрать LaTeX выражение, окружив его одиночными знаками доллара `$` - `$...$`
+* Для вставки выключенной формулы выражение нужно окружать двойными долларами - `$$...$$`
 
 ![mathjax](./images/mathjax.gif)
 
 **Note:**
 
-Be aware that math typesetting is handled by MathJax and not by LaTeX. While the vast majority of MathJax syntax is identical to LaTeX, there are a few small differences (especially when it comes to matrix commands).  So if you find something doesn't typeset the way you expect, Google around to make sure you're using the correct command.
+Необходимо помнить, что за отображение формул отвечает MathJax, а не LaTeX. И хотя большая часть синтаксиса для них совпадает, есть некоторые различия (в частности в командах для работы с матрицами). И если набранные формулы отображаются некорректно -- гуглите, правильный ли синтаксис вы используете.
 
-##More Markdown Syntax 
+##Еще о синтаксисе Markdown
 
-There are several references to learn Markdown tricks, but we especially like the summary by [John Gruber](http://daringfireball.net/projects/markdown/syntax).  A few features that we find particularly useful are listed below.
+Существует множество источников, из которых можно почерпнуть знания о приемах работы с Markdown, стоит отметить руководстсво Джона Грубера [John Gruber](http://daringfireball.net/projects/markdown/syntax). Некоторые из главных особенностей представлены ниже. 
 
-For italics, wrap text in single `*`: `*this will be italic*` For bold, wrap text in double `**`: `**this will be bold**` For a bulleted list, start the line with an `*`, then type a space followed by the bullet item ``` * list item * another list item * and another ```
+Для набора курсивом текст нужно окружить звездочками `*`: `*это курсив*`. Для полужирного текста используют двойные звездочки `**`: `**это полужирный текст**`.
+Маркированный список можно создать, если начать строку со звездочки, отделенной от основного текста пробелом:
+``` * элемент списка * еще один элемент списка * и еще один ```
 
-##Moving Cells Around
+##Перемещаем ячейки
 
-You'll often find that you want to add or delete cells, or just move them around.  To move a cell, just click on it to select it, then use the Up- and Down-arrows in the toolbar to change the position of the cell.
+В процессе работы с ноутбуком часто бывает нужно добавить или удалить ячейку, или поменять из расположение. Для того, чтобы переместить ячейку, выберите нужную, кликнув на нее, а затем используйте стрелки Вверх\Вниз на панели инструментов.
 
 ![movecells](./images/movingcells.gif)
 
-To add a cell, you can click the + button in the toolbar.  Once you're comfortable with the notebook layout, you can also click on Help -> Keyboard Shortcuts to find out various shortcuts for adding, deleting and managing cell position and type.
+Для добавления ячейки кликните кнопку + на панели инструментов. В интерфейсе блокнотов есть множество клавиатурных шорткатов, которые позволяют добавлять, удалять и изменять как положение так и свойства ячеек. Список шорткатов можно вызвать, кликнув в меню Help -> Keyboard Shortcuts.
